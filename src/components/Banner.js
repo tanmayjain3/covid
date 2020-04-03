@@ -1,20 +1,21 @@
 
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import "../styles/Banner.css";
 
 const Banner = () =>{
 
-    let text = "Hello";
-    let texts = ["Hi this is tanmay", "this is a demo project", "help me get it running"];
+    const [text, setText] = useState("Even the Virus Does not discriminate. Why do you? DO NOT DISCRIMINATE. WE are all Indians! ");
+    let texts = ["Be a true Indian. Show compassion. Be considerate. Help those in need. We will get through this!",
+     "Lockdown means LOCKDOWN! Avoid going out unless absolutely necessary. Stay safe! ",
+      "If you have any medical queries, reach out to your district administration or doctors! "];
     let bannerText = ()=>{
-        text = texts[Math.floor(Math.random()*texts.length)];
-        console.log("tanmay",text);
+        setText(texts[Math.floor(Math.random()*texts.length)]);
     }
-    useEffect(()=>{
+    useEffect(() => {
+        const interval = setInterval(bannerText, 3000);
+        return () => clearInterval(interval);
+      }, []);
 
-    },[text])
-    
-    setInterval(bannerText,2000);
     return(
         <div className="banner">
             <div className="snippet">
