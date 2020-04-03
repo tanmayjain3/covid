@@ -1,0 +1,18 @@
+
+.banner{
+    display: flex;
+    height: 112px;
+    background-color: #E3E3F3;
+}
+
+.snippet {
+    display: block;
+    align-self: center;
+    color: #3C39AE;
+    font-family: "Archia";
+    margin-right: 1rem;
+    margin-left: 1rem;
+    width: 100%;
+    word-wrap: break-word;
+    text-align: center;
+}

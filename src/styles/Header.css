@@ -1,0 +1,35 @@
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    height: 72px;
+    background-color:#F6F6F7;
+}
+
+.nav-link{
+    display: inline-block;
+    color: rgba(108,117,125,.6);
+    font-family: "Archia";
+    font-size: .75em !important;
+    cursor: pointer;
+    margin-right: .75rem !important;
+    text-transform: uppercase;
+}
+
+.nav-link :hover{
+    color: #6E767D;
+}
+
+.logo{
+    display: inline-block;
+    align-self: center;
+    width:32px;
+    margin: 0px 0px 0px 16px;
+    height: 32px;
+}
+
+.navbar-left{
+    margin-left: 2rem;
+    flex: 1 1;
+    align-self: center;
+}
