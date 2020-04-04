@@ -1,0 +1,48 @@
+.level-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.confirmed{
+    margin-left: 0.5rem;
+    color: #FF718B;
+}
+
+.active{
+    color: #71B0FF;
+}
+
+.recovered{
+    color: #80CA90;
+
+}
+
+.deceased{
+    color: #A7ACB1;
+}
+
+h4, h5{
+    font-family: "archia";
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+h5{
+    font-size: 12px !important;
+    margin-bottom: 0px;
+}
+
+h4{
+    font-size: 13px !important;
+    margin-bottom: -5rem;
+    align-self: center;
+}
+
+h1{
+    font-weight: 600;
+    margin-bottom: 0px;
+    font-family: "archia";
+    font-size: 24px!important;
+    text-transform: uppercase;
+    align-self: center;
+}
