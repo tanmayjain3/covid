@@ -1,0 +1,44 @@
+.header-mid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.heading{
+    font-family: "archia";
+    font-size: 24px!important;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #343a40;
+    margin: 0px;
+}
+
+.heading6{
+    margin: 0px;
+    font-weight: 600;
+    margin-top: .25rem;
+    color: #6c757d;
+}
+
+.last-update{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-bottom: auto;
+    margin-top: .25rem;
+    align-self: center;
+}
+
+.last-update h6{
+    color: rgba(40,167,69,.6);
+    font-weight: 900;
+    margin:0;
+    text-transform: uppercase;
+}
+
+.header {
+    width: 30rem;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+}
