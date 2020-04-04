@@ -1,18 +1,21 @@
 
 .banner{
     display: flex;
-    height: 112px;
-    background-color: #E3E3F3;
+    flex-direction: row;
+    justify-content: center;
+    line-height: 20px;
+    font-family: "Archia";
+    font-size: .8rem;
+    font-weight: 600;
+    color: rgba(32,26,162,.866667);
+    background: rgba(32,26,162,.12549);
 }
 
 .snippet {
-    display: block;
     align-self: center;
-    color: #3C39AE;
-    font-family: "Archia";
-    margin-right: 1rem;
-    margin-left: 1rem;
-    width: 100%;
+    width: calc(100% - 10rem);
     word-wrap: break-word;
+    padding: 1.5rem;
     text-align: center;
+    cursor: pointer;
 }
