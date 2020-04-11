@@ -1,0 +1,8 @@
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+    color: #6c757d;
+    max-width: 10rem;
+}
+

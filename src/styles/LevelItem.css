@@ -8,8 +8,16 @@
     color: #FF718B;
 }
 
+.confirmed h1{
+    color: #ff073a;
+}
+
 .active{
     color: #71B0FF;
+}
+
+.active h1{
+    color:#007bff;
 }
 
 .recovered{
@@ -17,8 +25,16 @@
 
 }
 
+.recovered h1{
+    color: #28a745;
+}
+
 .deceased{
     color: #A7ACB1;
+}
+
+.deceased h1{
+    color:#6c757d
 }
 
 h4, h5{

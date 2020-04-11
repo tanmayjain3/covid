@@ -1,0 +1,62 @@
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    cursor: pointer;
+}
+
+td{
+    padding: .25rem;
+    font-size: .9rem;
+    border-radius: 5px;
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: 600;
+}
+
+td:first-child{
+    text-align: left;
+    max-width: 7.5rem;
+    word-wrap: break-word;
+}
+
+.table_title-wrapper{
+    position: relative;
+}
+
+.dropdown svg{
+    position: absolute;
+    top: -.35rem;
+    left: 1px;
+    width: 11px;
+    stroke-width: 3;
+}
+
+svg{
+    height: 24px;
+    fill: none;
+    stroke: currentcolor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+svg:not(:root){
+    overflow: hidden;
+}
+
+.dropdown{
+    position: absolute;
+    left: -1.25rem;
+    top: .125rem;
+    background: rgba(108,117,125,.0627451);
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+}
+
+.rotateDownRight {
+    animation-name: rotateDownRight;
+    -webkit-animation-duration: .25s;
+    animation-fill-mode: both;
+}
