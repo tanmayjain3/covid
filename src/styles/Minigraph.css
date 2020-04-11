@@ -1,0 +1,8 @@
+.minigraph{
+    width: 30rem;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 -3rem;
+}

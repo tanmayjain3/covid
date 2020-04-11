@@ -1,0 +1,15 @@
+.lineChart-parent{
+    width: 5rem;
+    background: transparent!important;
+    height: 7rem;
+    position: relative;
+    display: flex;
+    align-self: center;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.kWKfgJ{
+    width: inherit;
+    height: inherit;
+}
