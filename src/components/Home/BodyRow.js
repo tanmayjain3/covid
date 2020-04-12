@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "../../styles/BodyRow.css"
-const BodyRow = ()=>{
-
+const BodyRow = ({stateData,index})=>{
     const [spanClass, setSpanClass] = useState("dropdown rotateDownRight")
-    const handleClick = () =>{
+    const handleClick = (event) =>{
+        event.preventDefault();
         setSpanClass(spanClass==="dropdown rotateDownRight"?"dropdown rotateRightDown":"dropdown rotateDownRight")
     }
+    let background = index%2===0?"":"#F8F9FA";
     return (
-        <tr className="state" onClick={handleClick}>
+        <tr className="state" onClick={handleClick} style={{background:background}}>
             <td>
                 <div className="table_title-wrapper">
                     <span className={spanClass}>
@@ -15,11 +16,19 @@ const BodyRow = ()=>{
                             <polyline points="6 9 12 15 18 9 "></polyline>
                         </svg>
                     </span>
-                    Maharashtra
+                    {stateData.state}
                 </div>
             </td>
             <td>
-                <span className="table_count-text"></span>
+                <span className="table_count-text">{stateData.confirmed}</span>
+            </td>
+            <td style={{color:"inherit"}}>{stateData.active}
+            </td>
+            <td>
+                <span className="table_count-text">{stateData.recovered}</span>
+            </td>
+            <td>
+                <span className="table_count-text">{stateData.deceased}</span>
             </td>
         </tr>
     )

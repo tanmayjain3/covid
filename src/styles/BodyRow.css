@@ -12,6 +12,7 @@ td{
     display: table-cell;
     vertical-align: inherit;
     font-weight: 600;
+    text-align: right;
 }
 
 td:first-child{
@@ -59,4 +60,13 @@ svg:not(:root){
     animation-name: rotateDownRight;
     -webkit-animation-duration: .25s;
     animation-fill-mode: both;
+}
+
+.table__count-text {
+    margin-left: .25rem;
+}
+
+tr:hover{
+    background: rgba(108,117,125,.12549)!important;
+
 }

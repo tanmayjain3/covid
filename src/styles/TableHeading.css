@@ -10,11 +10,11 @@
 }
 
 .arrow{
-    display: none;
+    display: inline;
 }
 
-.showArrow{
-    display: inline;
+.noArrow{
+    display: none;
 }
 
 .arrow-up {
