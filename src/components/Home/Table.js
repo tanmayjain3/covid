@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/Table.css";
 import TableHeading from "./TableHeadings";
 import TableBody from "./TableBody";
 
-const Table = ()=>{
+const Table = ({covidData})=>{
     const [headings, setHeadings] = useState([
         {
             name:"state/ut",
@@ -26,57 +26,7 @@ const Table = ()=>{
             arrow:false
         }
     ]);
-    const [data, setData] = useState([
-        {
-            state:"Maharashtra",
-            confirmed:1700,
-            active:"1400",
-            recovered:"250",
-            deceased:"50"
-        },
-        {
-            state:"Rajasthan",
-            confirmed:1600,
-            active:1300,
-            recovered:100,
-            deceased:0
-        },
-        {
-            state:"Telangana",
-            confirmed:1650,
-            active:850,
-            recovered:700,
-            deceased:100
-        },
-        {
-            state:"Gujarat",
-            confirmed:1800,
-            active:1200,
-            recovered:400,
-            deceased:200
-        },
-        {
-            state:"West Bengal",
-            confirmed:1930,
-            active:1800,
-            recovered:30,
-            deceased:100
-        },
-        {
-            state:"Uttar Pradesh",
-            confirmed:1000,
-            active:400,
-            recovered:340,
-            deceased:260
-        },
-        {
-            state:"Bihar",
-            confirmed:800,
-            active:200,
-            recovered:300,
-            deceased:300
-        }
-    ]);
+    const [data, setData] = useState(covidData);
 
     const handleHeaderClick = (event) =>{
         let headingClicked = event.target.id;

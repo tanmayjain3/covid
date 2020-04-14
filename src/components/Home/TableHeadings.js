@@ -2,7 +2,6 @@ import React,{useState} from "react";
 import "../../styles/TableHeading.css";
 
 const TableHeading = ({heading, arrow, dynamicStyle="sitcky"})=>{
-    console.log("in table ", arrow);
     const [arrowPosition, setArrowPosition] = useState("arrow-down");
     const changeOrder = ()=>{
         setArrowPosition(arrowPosition==="arrow-down"?"arrow-up":"arrow-down");
