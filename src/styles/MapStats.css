@@ -1,0 +1,104 @@
+
+.map-stats{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 5rem;
+    position: relative;
+}
+
+.stats{
+    background: rgba(255,7,58,.12549);
+    position: relative;
+    color: #ff073a;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-left: .25rem;
+    margin-right: .25rem;
+    margin-bottom: .5rem;
+    flex: 1 1;
+    padding: .25rem;
+}
+
+.stats:first-child{
+    margin-left: 0px;
+}
+
+.stats:last-child{
+    margin-right: 0px;
+}
+
+
+.red{
+    background:#FF718B;
+}
+
+.red h1{
+    color: #ff073a;
+}
+
+.blue{
+    background: rgba(0,123,255,.0627451);
+}
+
+.blue h1{
+    color: #007bff;
+}
+
+.blue h5{
+    color: rgba(0,123,255,.6);
+}
+
+.green{
+    background: rgba(40,167,69,.12549);
+}
+
+.green h1{
+    color: #28a745;
+}
+
+.green h5{
+    color: rgba(40,167,69,.6);
+}
+
+.grey{
+    background: rgba(108,117,125,.0627451);
+}
+
+.grey h1{
+    color: #6c757d;
+}
+
+.grey h5{
+    color :rgba(108,117,125,.6)
+}
+
+.purple{
+    background:rgba(32,26,162,.12549);
+}
+
+.purple h1{
+    color: rgba(32,26,162,.866667);
+}
+
+.purple h5{
+    color:rgba(32,26,162,.6)
+}
+
+.map-stats h5, .MapExplorer .map-stats h6 {
+    margin: 0;
+}
+
+h5{
+    font-size: 12px!important;
+}
+
+h1{
+    margin: 0px;
+}
+
+.stats-bottom{
+    display: flex;
+    flex-direction: row;
+}

@@ -6,8 +6,12 @@ const Header = () =>(
         <div className="navbar">
                 <img  className="logo" src="/icon.png" alt=""></img>
             <div className="navbar-left">
-                <a className="nav-link">Home</a> 
-                <a className="nav-link">Useful Links</a> 
+                <a className="nav-link focused">Home</a> 
+                <a className="nav-link">Demographics</a> 
+                <a className="nav-link">Deep Dive</a> 
+                <a className="nav-link">Helpful Links</a> 
+                <a className="nav-link">About</a> 
+                <a className="nav-link">Essentials</a> 
             </div>
         </div>
     )

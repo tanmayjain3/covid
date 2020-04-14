@@ -8682,6 +8682,13 @@ react-svg-line-chart@^2.0.2:
   dependencies:
     styled-components "^2.4.0"
 
+react-svg-map@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/react-svg-map/-/react-svg-map-2.0.2.tgz#3182f495cd56a9ba9b475eaf4b0f794dae8cba90"
+  integrity sha512-c/z5DQ+d0fLWFtEdhwqpBNm1CvPk4mN5Wq0MnfN7yOUHehpvw2OSCGglAVH/sTR/S/bq12fZqFjOQNjCJxs6ow==
+  dependencies:
+    prop-types "^15.7.2"
+
 react@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
