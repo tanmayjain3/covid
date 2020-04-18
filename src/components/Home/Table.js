@@ -1,71 +1,97 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../../styles/Table.css";
 import TableHeading from "./TableHeadings";
 import TableBody from "./TableBody";
 
-const Table = ({covidData})=>{
-    const [headings, setHeadings] = useState([
+class Table extends React.Component{
+    constructor(props){
+        super(props)
+    this.state = {"headings":[
         {
             name:"state/ut",
-            arrow:false
+            arrow:false,
+            arrowPosition:"arrow-down"
         },
         {
             name:"confirmed",
-            arrow:true
+            arrow:true,
+            arrowPosition:"arrow-down"
         },
         {
             name:"active",
-            arrow:false
+            arrow:false,
+            arrowPosition:"arrow-down"
         },
         {
             name:"recovered",
-            arrow:false
+            arrow:false,
+            arrowPosition:"arrow-down"
         },
         {
             name:"deceased",
-            arrow:false
+            arrow:false,
+            arrowPosition:"arrow-down"
         }
-    ]);
-    const [data, setData] = useState(covidData);
+    ],
+    "data":props.covidData,
+    "lastClicked":null
+        };
 
-    const handleHeaderClick = (event) =>{
+    this.handleHeaderClick = this.handleHeaderClick.bind(this);
+    this.tableBody = this.tableBody.bind(this);
+    this.tableHeading = this.tableHeading.bind(this);
+    }
+
+    handleHeaderClick (event){
         let headingClicked = event.target.id;
-        let headingData = headings;
-        headingData.forEach((state)=>{
-            if(state.name===headingClicked){
-                state.arrow=true;
+        let headingData = this.state.headings;
+        let arrowPosition;
+        headingData.forEach((heading)=>{
+            if(heading.lastClicked ===headingClicked){
+                heading.arrowPosition =heading.arrowPosition==="arrow-down"? "arrow-up":"arrow-down";
+                arrowPosition = heading.arrowPosition;
+            } else if(heading.name===headingClicked){
+                heading.arrow=true;
+                heading.lastClicked = headingClicked;
             } else{
-                state.arrow= false;
+                heading.arrow= false;
             }
         })
-        let stateData = data;
+        let stateData = this.state.data;
         stateData.sort((a,b)=>{
             return  b[headingClicked]-a[headingClicked];
         })
-        setData(stateData);
-        setHeadings(headingData);
+        if(arrowPosition && arrowPosition==="arrow-up"){
+            stateData.reverse();
+        }
+        this.setState({data:stateData,headings:headingData})
         
     }
     
-    const tableBody =(stateData)=>{
+    tableBody (stateData){
        return  <TableBody data={stateData}/>
-    
     }
 
+    tableHeading(headings){
+        return headings.map((heading , index) => {
+            return <TableHeading key={index} arrowPosition={heading.arrowPosition} heading={heading.name} dynamicStyle={index===0?"sticky state-heading":"sticky"} arrow={heading.arrow?"arrow":"noArrow"}/>
+        })
+    }
+render(){
     return (
         <table className="table fadeInUp">
             <thead>
-            { <tr onClick={handleHeaderClick}>
-                    {headings.map((heading , index) => {
-                        return <TableHeading key={index} heading={heading.name} dynamicStyle={index===0?"sticky state-heading":"sticky"} arrow={heading.arrow?"arrow":"noArrow"}/>
-                    })}
+            { <tr onClick={this.handleHeaderClick}>
+                  {this.tableHeading(this.state.headings)}
                 </tr>
             }
             </thead>
-            {tableBody(data)}
+            {this.tableBody(this.state.data)}
         </table>
     )
-}
+    }
+}    
+
 
 
 export default Table;

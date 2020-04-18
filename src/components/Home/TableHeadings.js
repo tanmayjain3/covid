@@ -1,22 +1,26 @@
-import React,{useState} from "react";
+import React from "react";
 import "../../styles/TableHeading.css";
 
-const TableHeading = ({heading, arrow, dynamicStyle="sitcky"})=>{
-    const [arrowPosition, setArrowPosition] = useState("arrow-down");
-    const changeOrder = ()=>{
-        setArrowPosition(arrowPosition==="arrow-down"?"arrow-up":"arrow-down");
+class TableHeading extends React.Component{
+    constructor(props){
+        super(props)
+        this.setState({props})
     }
 
-    return (
-        <th className={dynamicStyle} onClick={changeOrder} id={heading}>
-            <div className="content-heading" id={heading}>
-                <abbr title={heading} id={heading}>{heading}</abbr>
-                <div className={arrow}>
-                    <div className={arrowPosition}></div>
+    render(){
+        const {dynamicStyle, heading,arrow,arrowPosition} = this.props;
+        return (
+            <th className={dynamicStyle} id={heading}>
+                <div className="content-heading" id={heading}>
+                    <abbr title={heading} id={heading}>{heading}</abbr>
+                    <div className={arrow}>
+                        <div className={arrowPosition}></div>
+                    </div>
                 </div>
-            </div>
-        </th>
-    )
-}
+            </th>
+        )
+    }
+} 
+
 
 export default TableHeading;

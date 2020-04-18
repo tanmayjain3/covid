@@ -1,6 +1,25 @@
 .svg-parent{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     margin-top: 1rem;
+}
+
+.svg-map{
+    width: 480px!important;
+    height: 450px!important;
+    align-self: center;
+    z-index: 10;
+    stroke:#FFE1E7!important;
+}
+
+.svg-map__location {
+    fill:white!important;
+    cursor: pointer;
+}
+
+.svg-map__location:hover {
+    /* fill:red!important; */
+    cursor: pointer;
+    stroke: red;
 }
